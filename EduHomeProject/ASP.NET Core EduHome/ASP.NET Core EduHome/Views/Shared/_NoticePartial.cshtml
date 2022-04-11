@@ -1,0 +1,17 @@
+﻿@model List<Notice>
+<div class="col-md-6 col-sm-6 col-xs-12">
+    <div class="notice-left-wrapper">
+        <h3>notice board</h3>
+        <div class="notice-left">
+            @foreach (var notice in Model)
+            {
+                <div class="@notice.Size">
+                    <h4>@notice.Date</h4>
+                    <p>@notice.NoticeBoard</p>
+                </div>
+            }
+
+
+        </div>
+    </div>
+</div>
