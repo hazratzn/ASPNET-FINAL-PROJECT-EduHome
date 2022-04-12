@@ -31,6 +31,7 @@ namespace ASP.NET_Core_EduHome
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
             });
             services.AddScoped<LayoutService>();
+            services.AddScoped<SideBarService>();
 
         }
 

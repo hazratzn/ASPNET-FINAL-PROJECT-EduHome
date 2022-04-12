@@ -4,14 +4,16 @@ using ASP.NET_Core_EduHome.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ASP.NET_Core_EduHome.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220412060630_UpdateBlogTable")]
+    partial class UpdateBlogTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -360,24 +362,6 @@ namespace ASP.NET_Core_EduHome.Migrations
                     b.ToTable("Setting");
                 });
 
-            modelBuilder.Entity("ASP.NET_Core_EduHome.Models.Skill", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<bool>("IsDelete")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Skills");
-                });
-
             modelBuilder.Entity("ASP.NET_Core_EduHome.Models.Slider", b =>
                 {
                     b.Property<int>("Id")
@@ -418,24 +402,6 @@ namespace ASP.NET_Core_EduHome.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("SoicalNetworks");
-                });
-
-            modelBuilder.Entity("ASP.NET_Core_EduHome.Models.Tag", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<bool>("IsDelete")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Tags");
                 });
 
             modelBuilder.Entity("ASP.NET_Core_EduHome.Models.Teacher", b =>
@@ -533,21 +499,31 @@ namespace ASP.NET_Core_EduHome.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int>("Communicatiom")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Design")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Devolopment")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Innovation")
+                        .HasColumnType("int");
+
                     b.Property<bool>("IsDelete")
                         .HasColumnType("bit");
 
-                    b.Property<int>("Percentage")
-                        .HasColumnType("int");
-
-                    b.Property<int>("SkillId")
+                    b.Property<int>("Language")
                         .HasColumnType("int");
 
                     b.Property<int>("TeacherId")
                         .HasColumnType("int");
 
-                    b.HasKey("Id");
+                    b.Property<int>("TeamLeader")
+                        .HasColumnType("int");
 
-                    b.HasIndex("SkillId");
+                    b.HasKey("Id");
 
                     b.HasIndex("TeacherId");
 
@@ -792,12 +768,6 @@ namespace ASP.NET_Core_EduHome.Migrations
 
             modelBuilder.Entity("ASP.NET_Core_EduHome.Models.TeacherSkill", b =>
                 {
-                    b.HasOne("ASP.NET_Core_EduHome.Models.Skill", "Skills")
-                        .WithMany("TeacherSkills")
-                        .HasForeignKey("SkillId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("ASP.NET_Core_EduHome.Models.Teacher", "Teacher")
                         .WithMany("TeacherSkills")
                         .HasForeignKey("TeacherId")

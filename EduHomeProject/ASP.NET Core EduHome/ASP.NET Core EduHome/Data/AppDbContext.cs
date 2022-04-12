@@ -31,6 +31,11 @@ namespace ASP.NET_Core_EduHome.Data
         public DbSet<TeacherDetail> TeacherDetails { get; set; }
         public DbSet<CourseFeatures> TeacCourseFeatures { get; set; }
         public DbSet<CourseCategory> CourseCategories { get; set; }
+        public DbSet<Advertisment> Advertisment { get; set; }
+        public DbSet<Tag> Tags { get; set; }
+        public DbSet<Skill> Skills { get; set; }
+
+
 
 
     }

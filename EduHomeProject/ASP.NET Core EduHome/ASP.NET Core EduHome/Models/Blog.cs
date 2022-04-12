@@ -12,5 +12,6 @@ namespace ASP.NET_Core_EduHome.Models
         public string Date { get; set; }
         public string Comment { get; set; }
         public string Title { get; set; }
+        public string PostImage { get; set; }
     }
 }

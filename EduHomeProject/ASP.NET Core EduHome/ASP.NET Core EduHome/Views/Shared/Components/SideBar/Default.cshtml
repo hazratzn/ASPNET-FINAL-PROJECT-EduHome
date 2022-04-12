@@ -1,0 +1,49 @@
+﻿@model SideBarVM
+
+<div class="single-blog-widget mb-50">
+    <h3>categories</h3>
+    <ul>
+        @foreach (var categorie in Model.CourseCategories)
+        {
+            <li><a href="#">@categorie.Name (@categorie.Count)</a></li>
+        }
+
+
+    </ul>
+</div>
+<div class="single-blog-widget mb-50">
+    <div class="single-blog-banner">
+        <a href="blog-details.html" id="blog"><img src="~/assets/img/blog/@Model.Advertisments.Image" alt="blog"></a>
+        @Html.Raw(Model.Advertisments.Text)
+    </div>
+</div>
+<div class="single-blog-widget mb-50">
+    <h3>latest post</h3>
+    @foreach (var blog in Model.Blogs)
+    {
+        <div class="single-post">
+            <div class="single-post-img">
+                <a href="blog-details.html">
+                    <img src="~/assets/img/post/@blog.PostImage" alt="post">
+                    <div class="blog-hover">
+                        <i class="fa fa-link"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="single-post-content">
+                <h4><a href="blog-details.html">@blog.Title</a></h4>
+                <p>@blog.From  /  @blog.Date </p>
+            </div>
+        </div>
+    }
+</div>
+<div class="single-blog-widget">
+    <h3>tags</h3>
+    <div class="single-tag">
+        @foreach (var tag in Model.Tags)
+        {
+            <a asp-controller="Blog" asp-action="BlogDetails" class="mr-10 mb-10">@tag.Name</a>
+
+        }
+    </div>
+</div>
