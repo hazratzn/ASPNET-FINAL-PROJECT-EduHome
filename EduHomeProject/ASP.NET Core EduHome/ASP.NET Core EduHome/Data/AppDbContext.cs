@@ -34,6 +34,9 @@ namespace ASP.NET_Core_EduHome.Data
         public DbSet<Advertisment> Advertisment { get; set; }
         public DbSet<Tag> Tags { get; set; }
         public DbSet<Skill> Skills { get; set; }
+        public DbSet<EventSpeaker> EventSpeakers { get; set; }
+        public DbSet<Contact> Contacts { get; set; }
+
 
 
 

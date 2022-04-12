@@ -1,4 +1,4 @@
-﻿
+﻿@model ContactVM
 @{
     ViewData["Title"] = "Index";
 }
@@ -41,8 +41,8 @@
                         </div>
                         <div class="contact-add">
                             <h3>address</h3>
-                            <p>135, First Lane, City Street</p>
-                            <p>New Yourk City, USA</p>
+                            @Html.Raw(Model.Contact.Location)
+                            
                         </div>
                     </div>
                     <div class="single-contact mb-65">
@@ -51,8 +51,8 @@
                         </div>
                         <div class="contact-add">
                             <h3>address</h3>
-                            <p>135, First Lane, City Street</p>
-                            <p>New Yourk City, USA</p>
+                            @Html.Raw(Model.Contact.PhoneNum)
+                            
                         </div>
                     </div>
                     <div class="single-contact">
@@ -61,8 +61,7 @@
                         </div>
                         <div class="contact-add">
                             <h3>address</h3>
-                            <p>135, First Lane, City Street</p>
-                            <p>New Yourk City, USA</p>
+                             @Html.Raw(Model.Contact.WebSite)
                         </div>
                     </div>
                 </div>

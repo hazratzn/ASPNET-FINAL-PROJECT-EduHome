@@ -13,5 +13,7 @@ namespace ASP.NET_Core_EduHome.Models
         public string Time { get; set; }
         public string Location { get; set; }
         public string Description { get; set; }
+        public List<EventSpeaker> EventSpeakers { get; set; }
+
     }
 }

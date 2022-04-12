@@ -129,17 +129,17 @@
                 {
                     <div class="single-event mb-35">
                         <div class="event-img">
-                            <a href="event-details.html"><img src="~/assets/img/event/@events.Image" alt="event"></a>
+                            <a asp-controller="Event" asp-action="EventDetails" asp-route-id="@events.Id"><img src="~/assets/img/event/@events.Image" alt="event"></a>
                         </div>
                         <div class="event-content text-left">
                             @Html.Raw(events.Date)
-                            <h4><a href="event-details.html">@events.Name</a></h4>
+                            <h4><a asp-controller="Event" asp-action="EventDetails" asp-route-id="@events.Id">@events.Name</a></h4>
                             <ul>
                                 <li><i class="fa fa-clock-o"></i>@events.Time</li>
                                 <li><i class="fa fa-map-marker"></i>@events.Location</li>
                             </ul>
                             <div class="event-content-right">
-                                <a class="default-btn" href="event-details.html">join now</a>
+                                <a class="default-btn" asp-controller="Event" asp-action="EventDetails" asp-route-id="@events.Id">join now</a>
                             </div>
                         </div>
                     </div>
@@ -162,7 +162,7 @@
                                 <li><i class="fa fa-map-marker"></i>@events.Location</li>
                             </ul>
                             <div class="event-content-right">
-                                <a class="default-btn" asp-controller="Event" asp-action="EventDetails">join now</a>
+                                <a class="default-btn" asp-controller="Event" asp-action="EventDetails" asp-route-id="@events.Id">join now</a>
                             </div>
                         </div>
                     </div>
@@ -187,14 +187,14 @@
             </div>
         </div>
         <div class="row">
-            @foreach (var blogs in Model.Blog)
+            @foreach (var blogs in Model.Blog.Take(3))
             {
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="single-blog">
                         <div class="blog-img">
-                            <a href="blog-details.html"><img src="~/assets/img/blog/@blogs.Image" alt="blog"></a>
+                            <a asp-controller="Blog" asp-action="BlogDetails" asp-route-id ="@blogs.Id"><img src="~/assets/img/blog/@blogs.Image" alt="blog"></a>
                             <div class="blog-hover">
-                                <a href="blog-details.html"><i class="fa fa-link"></i></a>
+                                <a asp-controller="Blog" asp-action="BlogDetails" asp-route-id ="@blogs.Id"><i class="fa fa-link"></i></a>
                             </div>
                         </div>
                         <div class="blog-content">
@@ -202,8 +202,8 @@
                                 <p>@blogs.From  /  @blogs.Date  /  <i class="fa fa-comments-o"></i> @blogs.Comment</p>
                             </div>
                             <div class="blog-bottom">
-                                <h2><a href="blog-details.html">@blogs.Title </a></h2>
-                                <a href="blog-details.html">read more</a>
+                                <h2><a asp-controller="Blog" asp-action="BlogDetails" asp-route-id ="@blogs.Id">@blogs.Title </a></h2>
+                                <a asp-controller="Blog" asp-action="BlogDetails" asp-route-id ="@blogs.Id">read more</a>
                             </div>
                         </div>
                     </div>
