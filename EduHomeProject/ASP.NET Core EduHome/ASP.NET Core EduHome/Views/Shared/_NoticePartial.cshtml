@@ -3,7 +3,7 @@
     <div class="notice-left-wrapper">
         <h3>notice board</h3>
         <div class="notice-left">
-            @foreach (var notice in Model)
+            @foreach (var notice in Model.Where(m=>m.IsDelete == false).OrderByDescending(m=>m.Id))
             {
                 <div class="@notice.Size">
                     <h4>@notice.Date</h4>

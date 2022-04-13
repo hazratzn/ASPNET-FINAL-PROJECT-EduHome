@@ -1,0 +1,35 @@
+﻿
+@model Notice
+@{
+    ViewData["Title"] = "Update NoticeBoard";
+}
+
+<div class="container">
+    <div class="col-md-6 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+
+
+                <form class="forms-sample mt-5" method="post" asp-action="Update">
+                    <div class="form-group">
+
+
+                        <label asp-for="Date"></label>
+                        <input class="form-control" asp-for="Date">
+                        <span class="text-danger" asp-validation-for="Date"></span>
+
+                        <label asp-for="NoticeBoard"></label>
+                        <input class="form-control" asp-for="NoticeBoard">
+                        <span class="text-danger" asp-validation-for="NoticeBoard"></span>
+                    </div>
+                 
+                    <button type="submit" class="btn btn-primary me-2">Submit</button>
+                    <button class="btn btn-light">
+                        <a asp-action="Index">Cancel</a>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

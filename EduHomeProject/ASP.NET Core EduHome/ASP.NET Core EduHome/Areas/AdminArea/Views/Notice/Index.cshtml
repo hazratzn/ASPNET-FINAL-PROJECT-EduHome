@@ -1,0 +1,67 @@
+﻿@model List<Notice>
+@{
+    ViewData["Title"] = "Notices";
+    int count = 1;
+
+}
+<div class="container mt-3">
+    <div class="d-flex justify-content-between">
+        <h2>Professional Teachers</h2>
+        <a class="btn btn-success" asp-action="Create">Create Notice</a>
+    </div>
+    <div class="table-responsive pt-3">
+        <table class="table table-dark">
+            <thead>
+                <tr>
+                    <th>
+                        #
+                    </th>
+                    <th>
+                        Notice
+                    </th>
+                    <th>
+                        Settings
+                    </th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var notice in Model)
+                {
+                    <tr>
+                        <td>
+
+                            @count
+                        </td>
+                        <td>
+                            @if (notice.NoticeBoard.Length > 15)
+                            {
+                                @(notice.NoticeBoard.Substring(0, 15) + "...")
+
+                            }
+                else
+                {
+                    @notice.NoticeBoard
+                }
+
+
+
+                        </td>
+                        <td>
+                            <a class="btn btn-warning" asp-action="Update" asp-route-id="@notice.Id">Edit</a>
+
+                            <form style="display:inline-block" method="post" asp-action="Delete" asp-route-id="@notice.Id">
+                                <button class="btn btn-danger">Delete</button>
+                            </form>
+                            <a class="btn btn-info" asp-action="Detail" asp-route-id="@notice.Id">Detail</a>
+                        </td>
+
+                    </tr>
+
+                    count++;
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>
