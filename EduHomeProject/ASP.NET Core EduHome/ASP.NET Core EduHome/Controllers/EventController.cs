@@ -22,7 +22,7 @@ namespace ASP.NET_Core_EduHome.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            List<Event> events = await _context.Event.ToListAsync();
+            List<Event> events = await _context.Event.Where(m => m.IsDelete == false).ToListAsync();
 
             EventVM eventVM = new EventVM
             {
@@ -33,8 +33,9 @@ namespace ASP.NET_Core_EduHome.Controllers
         }
         public async Task<IActionResult> EventDetails(int id)
         {
-            Event events = await _context.Event
-                
+            Event events = await _context.Event.Where(m => m.IsDelete == false)
+
+
                 .Where(m => m.Id == id)
                 .Include(m => m.EventSpeakers)
                 .ThenInclude(m => m.Teachers)

@@ -22,7 +22,7 @@ namespace ASP.NET_Core_EduHome.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            List<Teacher> teacher = await _context.Teachers.ToListAsync();
+            List<Teacher> teacher = await _context.Teachers.Where(m => m.IsDelete == false).ToListAsync();
 
             TeacherVM teacherVM = new TeacherVM()
             {
@@ -32,7 +32,8 @@ namespace ASP.NET_Core_EduHome.Controllers
         }
         public async Task<IActionResult> TeacherDetails(int id)
         {
-            Teacher teacher = await _context.Teachers
+            Teacher teacher = await _context.Teachers.Where(m => m.IsDelete == false)
+                .Where(m => m.IsDelete == false)
                 .Where(m=>m.Id == id)
                 .Include(m=>m.TeacherContacts)
                 .Include(m=>m.TeacherDetails)

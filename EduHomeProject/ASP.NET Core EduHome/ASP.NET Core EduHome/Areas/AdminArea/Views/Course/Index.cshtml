@@ -1,0 +1,65 @@
+﻿@model CourseListVM
+@{
+    ViewData["Title"] = "Courses";
+    int count = 1;
+
+}
+<div class="container mt-3">
+    <div class="d-flex justify-content-between">
+        <h2>Courses</h2>
+        <a class="btn btn-success" asp-action="Create">Create Course</a>
+    </div>
+    <div class="table-responsive pt-3">
+        <table class="table table-dark">
+            <thead>
+                <tr>
+                    <th>
+                        #
+                    </th>
+                    <th>
+                        Image
+                    </th>
+                    <th>
+                        Title
+                    </th>
+                    <th>
+                        Settings
+                    </th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var course in Model.Courses)
+                {
+                <tr>
+                    <td>
+
+                        @count
+                    </td>
+                    <td>
+                        <img src="~/assets/img/course/@course.Image" style="width:100px;height:100px" alt="Alternate Text" />
+
+                    </td>
+                    <td>
+                       @course.Title
+
+                    </td>
+                    <td>
+                        <a class="btn btn-warning" asp-action="Update" asp-route-id="@course.Id">Edit</a>
+
+                        <form style="display:inline-block" method="post" asp-action="Delete" asp-route-id="@course.Id">
+                            <button class="btn btn-danger">Delete</button>
+                        </form>
+                        <a class="btn btn-info" asp-action="Detail" asp-route-id="@course.Id">Detail</a>
+                    </td>
+
+                </tr>
+
+                    count++;
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>
+

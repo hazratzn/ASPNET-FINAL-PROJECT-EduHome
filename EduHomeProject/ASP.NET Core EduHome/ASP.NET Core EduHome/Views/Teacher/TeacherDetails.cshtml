@@ -36,14 +36,14 @@
                     <h4>about me</h4>
                     <p>@Model.Teacher.About </p>
                     <ul>
-                        @foreach (var teacher in Model.Teacher.TeacherDetails)
-                        {
-                            <li><span>degree: </span>@teacher.Degree</li>
+                        
+                        
+                            <li><span>degree: </span>@Model.Teacher.TeacherDetails.Degree</li>
                             
-                            <li><span>experience: </span>@teacher.Experience</li>
-                            <li><span>hobbies: </span>@teacher.Hobbies</li>
-                            <li><span>faculty: </span>@teacher.Faculty</li>
-                        }
+                            <li><span>experience: </span>@Model.Teacher.TeacherDetails.Experience</li>
+                            <li><span>hobbies: </span>@Model.Teacher.TeacherDetails.Hobbies</li>
+                            <li><span>faculty: </span>@Model.Teacher.TeacherDetails.Faculty</li>
+                        
 
 
                     </ul>
@@ -54,12 +54,12 @@
             <div class="col-md-3 col-sm-4">
                 <div class="teacher-contact">
                     <h4>contact information</h4>
-                    @foreach (var teacherss in Model.Teacher.TeacherContacts)
-                    {
-                        <p><span>mail me : </span>@teacherss.Mail</p>
-                        <p><span>make a call : </span>@teacherss.Phone</p>
-                        <p><span>skype : </span> @teacherss.Skype</p>
-                    }
+                    
+                    
+                        <p><span>mail me : </span>@Model.Teacher.TeacherContacts.Mail</p>
+                        <p><span>make a call : </span>@Model.Teacher.TeacherContacts.Phone</p>
+                        <p><span>skype : </span> @Model.Teacher.TeacherContacts.Skype</p>
+                   
 
                     <ul>
                         <li><a href="https://www.facebook.com/devitems/?ref=bookmarks"><i class="zmdi zmdi-facebook"></i></a></li>
@@ -75,21 +75,21 @@
                 </div>
                 <div class="skill-wrapper">
                     <div class="row">
-                        @foreach (var skills in Model.Teacher.TeacherSkills)
+                        
 
-                        {
+                       
                             <div class="col-sm-4">
                                 <div class="skill-bar-item">
-                                    <span> @skills.Skills.Name </span>
+                                    <span> @Model.Teacher.TeacherSkills.Skills.Name </span>
                                     <div class="progress">
-                                        <div data-wow-delay="1.2s" data-wow-duration="1.5s" style="width: @skills.Percentage%; visibility: visible; animation-duration: 1.5s; animation-delay: 1.2s; animation-name: fadeInLeft;" data-progress="50%" class="progress-bar wow fadeInLeft">
-                                            <span class="text-top">@skills.Percentage %</span>
+                                        <div data-wow-delay="1.2s" data-wow-duration="1.5s" style="width: @Model.Teacher.TeacherSkills.Percentage%; visibility: visible; animation-duration: 1.5s; animation-delay: 1.2s; animation-name: fadeInLeft;" data-progress="50%" class="progress-bar wow fadeInLeft">
+                                            <span class="text-top">@Model.Teacher.TeacherSkills.Percentage %</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             
-                        }
+                        
 
 
                     </div>

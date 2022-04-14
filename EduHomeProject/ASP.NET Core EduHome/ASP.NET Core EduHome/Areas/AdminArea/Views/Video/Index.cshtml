@@ -1,0 +1,48 @@
+﻿@model Video
+@{
+    ViewData["Title"] = "Index";
+
+}
+
+<div class="container mt-3">
+    <div class="d-flex justify-content-between">
+        <h2>Welcome Banner</h2>
+    </div>
+    <div class="table-responsive pt-3">
+        <table class="table table-dark">
+            <thead>
+                <tr>
+                    <th>
+                        #
+                    </th>
+                    <th>
+                        Link
+                    </th>
+                    <th>
+                        Video 
+                    </th>
+                   
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        1
+                    </td>
+                    <td>
+                        @Model.Link
+                        @*  <img src="~/assets/img/about/@Model.Link" alt="about">*@
+                    </td>
+
+                    <td>
+                        <a class="btn btn-warning" asp-action="Update" asp-route-id="@Model.Id">Edit</a>
+                    </td>
+
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>
+

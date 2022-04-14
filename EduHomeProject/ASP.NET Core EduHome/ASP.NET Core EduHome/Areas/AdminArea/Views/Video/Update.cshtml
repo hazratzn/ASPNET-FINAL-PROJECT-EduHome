@@ -1,0 +1,28 @@
+﻿@model Video
+@{
+    ViewData["Title"] = "Update Video";
+}
+
+<div class="container">
+    <div class="col-md-6 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+
+
+                <form class="forms-sample mt-5" method="post" asp-action="Update" >
+                    <div class="form-group">
+                        <label asp-for="Link"></label>
+                        <input class="form-control" asp-for="Link">
+                        <span class="text-danger" asp-validation-for="Link"></span>
+
+
+                    </div>
+                    <button type="submit" class="btn btn-primary me-2">Submit</button>
+                    <button class="btn btn-light">
+                        <a asp-action="Index">Cancel</a>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

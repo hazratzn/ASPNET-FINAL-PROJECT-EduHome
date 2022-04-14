@@ -22,7 +22,7 @@ namespace ASP.NET_Core_EduHome.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            List<Blog> blogs = await _context.Blog.ToListAsync();
+            List<Blog> blogs = await _context.Blog.Where(m => m.IsDelete == false).ToListAsync();
 
             BlogVM blogVM = new BlogVM
             {

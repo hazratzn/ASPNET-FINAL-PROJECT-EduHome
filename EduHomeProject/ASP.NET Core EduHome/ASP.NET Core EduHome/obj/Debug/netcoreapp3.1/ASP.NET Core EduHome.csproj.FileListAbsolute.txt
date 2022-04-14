@@ -168,7 +168,6 @@ C:\Users\ASUS\Desktop\Final Project ASP\EduHomeProject\ASP.NET Core EduHome\ASP.
 C:\Users\ASUS\Desktop\Final Project ASP\EduHomeProject\ASP.NET Core EduHome\ASP.NET Core EduHome\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Footer\Default.cshtml.g.cs
 C:\Users\ASUS\Desktop\Final Project ASP\EduHomeProject\ASP.NET Core EduHome\ASP.NET Core EduHome\obj\Debug\netcoreapp3.1\Razor\Views\Course\CourseDetails.cshtml.g.cs
 C:\Users\ASUS\Desktop\Final Project ASP\EduHomeProject\ASP.NET Core EduHome\ASP.NET Core EduHome\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\SideBar\Default.cshtml.g.cs
-C:\Users\ASUS\Desktop\Final Project ASP\EduHomeProject\ASP.NET Core EduHome\ASP.NET Core EduHome\obj\Debug\netcoreapp3.1\ASP.NET Core EduHome.csproj.AssemblyReference.cache
 C:\Users\ASUS\Desktop\Final Project ASP\EduHomeProject\ASP.NET Core EduHome\ASP.NET Core EduHome\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Dashboard\Index.cshtml.g.cs
 C:\Users\ASUS\Desktop\Final Project ASP\EduHomeProject\ASP.NET Core EduHome\ASP.NET Core EduHome\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Shared\_AdminLayout.cshtml.g.cs
 C:\Users\ASUS\Desktop\Final Project ASP\EduHomeProject\ASP.NET Core EduHome\ASP.NET Core EduHome\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\_ViewStart.cshtml.g.cs
@@ -187,3 +186,19 @@ C:\Users\ASUS\Desktop\Final Project ASP\EduHomeProject\ASP.NET Core EduHome\ASP.
 C:\Users\ASUS\Desktop\Final Project ASP\EduHomeProject\ASP.NET Core EduHome\ASP.NET Core EduHome\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Notice\Create.cshtml.g.cs
 C:\Users\ASUS\Desktop\Final Project ASP\EduHomeProject\ASP.NET Core EduHome\ASP.NET Core EduHome\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Notice\Update.cshtml.g.cs
 C:\Users\ASUS\Desktop\Final Project ASP\EduHomeProject\ASP.NET Core EduHome\ASP.NET Core EduHome\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Notice\Detail.cshtml.g.cs
+C:\Users\ASUS\Desktop\Final Project ASP\EduHomeProject\ASP.NET Core EduHome\ASP.NET Core EduHome\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Video\Index.cshtml.g.cs
+C:\Users\ASUS\Desktop\Final Project ASP\EduHomeProject\ASP.NET Core EduHome\ASP.NET Core EduHome\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Video\Update.cshtml.g.cs
+C:\Users\ASUS\Desktop\Final Project ASP\EduHomeProject\ASP.NET Core EduHome\ASP.NET Core EduHome\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Testemonial\Index.cshtml.g.cs
+C:\Users\ASUS\Desktop\Final Project ASP\EduHomeProject\ASP.NET Core EduHome\ASP.NET Core EduHome\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Testemonial\Create.cshtml.g.cs
+C:\Users\ASUS\Desktop\Final Project ASP\EduHomeProject\ASP.NET Core EduHome\ASP.NET Core EduHome\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Testemonial\Update.cshtml.g.cs
+C:\Users\ASUS\Desktop\Final Project ASP\EduHomeProject\ASP.NET Core EduHome\ASP.NET Core EduHome\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Testemonial\Detail.cshtml.g.cs
+C:\Users\ASUS\Desktop\Final Project ASP\EduHomeProject\ASP.NET Core EduHome\ASP.NET Core EduHome\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Course\Index.cshtml.g.cs
+C:\Users\ASUS\Desktop\Final Project ASP\EduHomeProject\ASP.NET Core EduHome\ASP.NET Core EduHome\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Course\Create.cshtml.g.cs
+C:\Users\ASUS\Desktop\Final Project ASP\EduHomeProject\ASP.NET Core EduHome\ASP.NET Core EduHome\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Course\Update.cshtml.g.cs
+C:\Users\ASUS\Desktop\Final Project ASP\EduHomeProject\ASP.NET Core EduHome\ASP.NET Core EduHome\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Course\Detail.cshtml.g.cs
+C:\Users\ASUS\Desktop\Final Project ASP\EduHomeProject\ASP.NET Core EduHome\ASP.NET Core EduHome\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Blog\Index.cshtml.g.cs
+C:\Users\ASUS\Desktop\Final Project ASP\EduHomeProject\ASP.NET Core EduHome\ASP.NET Core EduHome\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Blog\Create.cshtml.g.cs
+C:\Users\ASUS\Desktop\Final Project ASP\EduHomeProject\ASP.NET Core EduHome\ASP.NET Core EduHome\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Blog\Update.cshtml.g.cs
+C:\Users\ASUS\Desktop\Final Project ASP\EduHomeProject\ASP.NET Core EduHome\ASP.NET Core EduHome\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Blog\Detail.cshtml.g.cs
+C:\Users\ASUS\Desktop\Final Project ASP\EduHomeProject\ASP.NET Core EduHome\ASP.NET Core EduHome\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Teacher\Index.cshtml.g.cs
+C:\Users\ASUS\Desktop\Final Project ASP\EduHomeProject\ASP.NET Core EduHome\ASP.NET Core EduHome\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Teacher\Create.cshtml.g.cs

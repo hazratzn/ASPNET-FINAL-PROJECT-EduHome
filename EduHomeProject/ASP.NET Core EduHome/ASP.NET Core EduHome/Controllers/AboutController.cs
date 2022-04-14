@@ -22,11 +22,11 @@ namespace ASP.NET_Core_EduHome.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            Welcome welcome = await _context.Welcome.FirstOrDefaultAsync();
-            List<Teacher> teachers = await _context.Teachers.ToListAsync();
-            Video video = await _context.Video.FirstOrDefaultAsync();
-            List<Notice> notice = await _context.Notice.ToListAsync();
-            Testemonial testemonials = await _context.Testemonial.FirstOrDefaultAsync();
+            Welcome welcome = await _context.Welcome.Where(m=>m.IsDelete ==false).FirstOrDefaultAsync();
+            List<Teacher> teachers = await _context.Teachers.Where(m => m.IsDelete == false).ToListAsync();
+            Video video = await _context.Video.Where(m => m.IsDelete == false).FirstOrDefaultAsync();
+            List<Notice> notice = await _context.Notice.Where(m => m.IsDelete == false).ToListAsync();
+            Testemonial testemonials = await _context.Testemonial.Where(m => m.IsDelete == false).FirstOrDefaultAsync();
 
 
 

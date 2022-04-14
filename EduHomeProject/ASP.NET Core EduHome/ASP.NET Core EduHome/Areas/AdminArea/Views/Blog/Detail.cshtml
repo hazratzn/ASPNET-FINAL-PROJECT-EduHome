@@ -1,0 +1,20 @@
+﻿@model Blog
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<div class="container">
+    <h1 class="text-primary">Blog Detail</h1>
+    <hr />
+    <img src="~/assets/img/blog/@Model.Image" alt="Alternate Text" style="width:380px;height:380px;border-radius:50%" />
+    <hr />
+    <h3 class="text-primary mt-3" style="font-weight:bolder;font-family:sans-serif">Title: <span style="color:grey;font-size:20px;font-weight:lighter">@Model.Title</span> </h3>
+    <h3 class="text-primary mt-3" style="font-weight: bolder; font-family: sans-serif">Description: <span style="color: grey; font-size: 20px; font-weight: lighter">@Model.Description</span> </h3>
+    <h3 class="text-primary mt-3" style="font-weight:bolder;font-family:sans-serif">Comment: <span style="color:grey;font-size:20px;font-weight:lighter">@Model.Comment</span> </h3>
+    <h3 class="text-primary mt-3" style="font-weight: bolder; font-family: sans-serif">From: <span style="color: grey; font-size: 20px; font-weight: lighter">@Model.From</span> </h3>
+    <h3 class="text-primary mt-3" style="font-weight:bolder;font-family:sans-serif">Date: <span style="color:grey;font-size:20px;font-weight:lighter">@Model.Date</span> </h3>
+ 
+
+    <a asp-action="Index" class="btn btn-outline-primary mt-3">Go back</a>
+</div>
+

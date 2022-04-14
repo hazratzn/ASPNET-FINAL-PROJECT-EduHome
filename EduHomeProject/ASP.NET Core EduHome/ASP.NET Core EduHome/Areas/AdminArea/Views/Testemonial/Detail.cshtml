@@ -1,0 +1,16 @@
+﻿@model Testemonial
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<div class="container">
+    <h1 class="text-warning">Slider detail</h1>
+    <hr />
+    <img src="~/assets/img/testimonial/@Model.Image" alt="Alternate Text" style="width:350px;height:350px;border-radius:50%" />
+    <hr />
+    <h3 class="text-warning mt-3" style="font-weight:bolder;font-family:sans-serif">Title: <span style="color:grey;font-size:20px;font-weight:lighter">@Model.Name</span> </h3>
+    <h3 class="text-warning mt-3" style="font-weight:bolder;font-family:sans-serif">Title: <span style="color:grey;font-size:20px;font-weight:lighter">@Model.Profession</span> </h3>
+    <h3 class="text-warning mt-3" style="font-weight: bolder; font-family: sans-serif">Description: <span style="color: grey; font-size: 20px; font-weight: lighter">@Model.Description</span> </h3>
+
+    <a asp-action="Index" class="btn btn-outline-warning mt-3">Go back</a>
+</div>

@@ -24,7 +24,7 @@ namespace ASP.NET_Core_EduHome.Controllers
         public async Task<IActionResult> Index()
          
         {
-            Contact contact = await _context.Contacts.FirstOrDefaultAsync();
+            Contact contact = await _context.Contacts.Where(m => m.IsDelete == false).FirstOrDefaultAsync();
 
             ContactVM contactVM = new ContactVM
             {

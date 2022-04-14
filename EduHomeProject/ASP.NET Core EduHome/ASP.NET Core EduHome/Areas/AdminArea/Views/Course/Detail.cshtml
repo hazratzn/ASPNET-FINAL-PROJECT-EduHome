@@ -1,0 +1,31 @@
+﻿@model Course
+@{ ViewData["Title"] = "Detail"; }
+
+<div class="container">
+    <h1 class="text-warning">Course detail</h1>
+    <hr />
+    <img src="~/assets/img/course/@Model.Image" alt="Alternate Text" style="width:350px;height:350px;border-radius:50%" />
+    <hr />
+    <h3 class="text-warning mt-3" style="font-weight:bolder;font-family:sans-serif">Title: <span style="color:grey;font-size:20px;font-weight:lighter">@Model.Title</span> </h3>
+    <h3 class="text-warning mt-3" style="font-weight: bolder; font-family: sans-serif">About: <span style="color: grey; font-size: 20px; font-weight: lighter">@Model.About</span> </h3>
+    <h3 class="text-warning mt-3" style="font-weight:bolder;font-family:sans-serif">Apply: <span style="color:grey;font-size:20px;font-weight:lighter">@Model.Apply</span> </h3>
+    <h3 class="text-warning mt-3" style="font-weight: bolder; font-family: sans-serif">Certification: <span style="color: grey; font-size: 20px; font-weight: lighter">@Model.Certificatiom</span> </h3>
+    <h3 class="text-warning mt-3" style="font-weight:bolder;font-family:sans-serif">Description: <span style="color:grey;font-size:20px;font-weight:lighter">@Model.Description</span> </h3>
+    <h3 class="text-warning mt-3" style="font-weight: bolder; font-family: sans-serif">Assesment: <span style="color: grey; font-size: 20px; font-weight: lighter">@Model.CourseFeatures.Assesment</span> </h3>
+    <hr />
+    <h3>
+        Course Features
+    </h3>
+    <hr />
+    <h3 class="text-warning mt-3" style="font-weight:bolder;font-family:sans-serif">ClassDuration: <span style="color:grey;font-size:20px;font-weight:lighter">@Model.CourseFeatures.ClassDuration</span> </h3>
+    <h3 class="text-warning mt-3" style="font-weight: bolder; font-family: sans-serif">Duration: <span style="color: grey; font-size: 20px; font-weight: lighter">@Model.CourseFeatures.Duration</span> </h3>
+    <h3 class="text-warning mt-3" style="font-weight:bolder;font-family:sans-serif">Language: <span style="color:grey;font-size:20px;font-weight:lighter">@Model.CourseFeatures.Language</span> </h3>
+    <h3 class="text-warning mt-3" style="font-weight: bolder; font-family: sans-serif">Price: <span style="color: grey; font-size: 20px; font-weight: lighter">@Model.CourseFeatures.Price</span> </h3>
+    <h3 class="text-warning mt-3" style="font-weight:bolder;font-family:sans-serif">SkillLevel: <span style="color:grey;font-size:20px;font-weight:lighter">@Model.CourseFeatures.SkillLevel</span> </h3>
+    <h3 class="text-warning mt-3" style="font-weight: bolder; font-family: sans-serif">Starts: <span style="color: grey; font-size: 20px; font-weight: lighter">@Model.CourseFeatures.Starts</span> </h3>
+    <h3 class="text-warning mt-3" style="font-weight: bolder; font-family: sans-serif">Students: <span style="color: grey; font-size: 20px; font-weight: lighter">@Model.CourseFeatures.Students</span> </h3>
+    <a asp-action="Index" class="btn btn-outline-warning mt-3">Go back</a>
+</div>
+
+
+

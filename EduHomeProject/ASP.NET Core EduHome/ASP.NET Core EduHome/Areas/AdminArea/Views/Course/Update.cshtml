@@ -1,0 +1,88 @@
+﻿@model CourseUpdateVM
+@{ ViewData["Title"] = "Course Update"; }
+
+<div class="container">
+    <div class="col-md-6 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <img src="~/assets/img/course/@Model.Image" alt="course">
+                <form class="forms-sample" method="post" asp-action="Create" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label asp-for="Photo"></label>
+                        <input class="form-control" asp-for="Photo">
+                        <span class="text-danger" asp-validation-for="Photo"></span>
+
+                        <label asp-for="Title"></label>
+                        <input class="form-control" asp-for="Title">
+                        <span class="text-danger" asp-validation-for="Title"></span>
+
+                        <label asp-for="Apply"></label>
+                        <input class="form-control" asp-for="Apply">
+                        <span class="text-danger" asp-validation-for="Apply"></span>
+
+                        <label asp-for="About"></label>
+                        <input class="form-control" asp-for="About">
+                        <span class="text-danger" asp-validation-for="About"></span>
+
+                        <label asp-for="Certificatiom"></label>
+                        <input class="form-control" asp-for="Certificatiom">
+                        <span class="text-danger" asp-validation-for="Certificatiom"></span>
+
+
+                        <label asp-for="Description"></label>
+                        <input class="form-control" asp-for="Description">
+                        <span class="text-danger" asp-validation-for="Description"></span>
+
+
+
+
+
+
+                        <h3 class="my-5">Course Features</h3>
+
+                        <label asp-for="Starts"></label>
+                        <input class="form-control" asp-for="Starts">
+                        <span class="text-danger" asp-validation-for="Starts"></span>
+
+                        <label asp-for="Duration"></label>
+                        <input class="form-control" asp-for="Duration">
+                        <span class="text-danger" asp-validation-for="Duration"></span>
+
+                        <label asp-for="ClassDuration"></label>
+                        <input class="form-control" asp-for="ClassDuration">
+                        <span class="text-danger" asp-validation-for="ClassDuration"></span>
+
+                        <label asp-for="Assesment"></label>
+                        <input class="form-control" asp-for="Assesment">
+                        <span class="text-danger" asp-validation-for="Assesment"></span>
+
+                        <label asp-for="SkillLevel"></label>
+                        <input class="form-control" asp-for="SkillLevel">
+                        <span class="text-danger" asp-validation-for="SkillLevel"></span>
+
+                        <label asp-for="Language"></label>
+                        <input class="form-control" asp-for="Language">
+                        <span class="text-danger" asp-validation-for="Language"></span>
+
+                        <label asp-for="Students"></label>
+                        <input class="form-control" asp-for="Students">
+                        <span class="text-danger" asp-validation-for="Students"></span>
+
+                        <label asp-for="Price"></label>
+                        <input class="form-control" asp-for="Price">
+                        <span class="text-danger" asp-validation-for="Price"></span>
+
+                        <label asp-for="SkillLevel"></label>
+                        <input class="form-control" asp-for="SkillLevel">
+                        <span class="text-danger" asp-validation-for="SkillLevel"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary me-2">Submit</button>
+                    <button class="btn btn-light">
+                        <a asp-action="Index">Cancel</a>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
