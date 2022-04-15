@@ -1,0 +1,43 @@
+﻿@model Teacher
+@{ ViewData["Title"] = "Detail"; }
+
+<div class="container">
+    <h1 class="text-warning">Teacher detail</h1>
+    <hr />
+    <img src="~/assets/img/teacher/@Model.Image" alt="Alternate Text" style="width:350px;height:350px;border-radius:50%" />
+    <hr />
+    <h3>
+        Teacher
+    </h3>
+    <h3 class="text-info mt-3" style="font-weight:bolder;font-family:sans-serif">Name: <span style="color:grey;font-size:20px;font-weight:lighter">@Model.FullNAME</span> </h3>
+    <h3 class="text-info mt-3" style="font-weight: bolder; font-family: sans-serif">Profession: <span style="color: grey; font-size: 20px; font-weight: lighter">@Model.Profession</span> </h3>
+    <h3 class="text-info mt-3" style="font-weight: bolder; font-family: sans-serif">About: <span style="color: grey; font-size: 20px; font-weight: lighter">@Model.About</span> </h3>
+
+    <hr />
+    <h3>
+        Teacher Contacts
+    </h3>
+    <hr />
+    <h3 class="text-info mt-3" style="font-weight:bolder;font-family:sans-serif">Mail: <span style="color:grey;font-size:20px;font-weight:lighter">@Model.TeacherContacts.Mail</span> </h3>
+    <h3 class="text-info mt-3" style="font-weight: bolder; font-family: sans-serif">Phone: <span style="color: grey; font-size: 20px; font-weight: lighter">@Model.TeacherContacts.Phone</span> </h3>
+    <h3 class="text-info mt-3" style="font-weight:bolder;font-family:sans-serif">Skype: <span style="color:grey;font-size:20px;font-weight:lighter">@Model.TeacherContacts.Skype</span> </h3>
+    <hr />
+    <h3>
+        Teacher Details
+    </h3>
+    <hr />
+    <h3 class="text-info mt-3" style="font-weight:bolder;font-family:sans-serif">Degree: <span style="color:grey;font-size:20px;font-weight:lighter">@Model.TeacherDetails.Degree</span> </h3>
+    <h3 class="text-info mt-3" style="font-weight: bolder; font-family: sans-serif">Exprience: <span style="color: grey; font-size: 20px; font-weight: lighter">@Model.TeacherDetails.Experience</span> </h3>
+    <h3 class="text-info mt-3" style="font-weight:bolder;font-family:sans-serif">Hobbies: <span style="color:grey;font-size:20px;font-weight:lighter">@Model.TeacherDetails.Hobbies</span> </h3>
+    <h3 class="text-info mt-3" style="font-weight:bolder;font-family:sans-serif">Faculty: <span style="color:grey;font-size:20px;font-weight:lighter">@Model.TeacherDetails.Faculty</span> </h3>
+    <hr />
+    <h3>
+        Teacher Skills
+    </h3>
+    <hr />
+    @foreach (var skills in Model.TeacherSkills)
+    {
+        <h3 class="text-info mt-3" style="font-weight:bolder;font-family:sans-serif">@skills.Skills.Name: <span style="color:grey;font-size:20px;font-weight:lighter">@skills.Percentage</span> </h3>
+    }
+    <a asp-action="Index" class="btn btn-outline-warning mt-3">Go back</a>
+</div>

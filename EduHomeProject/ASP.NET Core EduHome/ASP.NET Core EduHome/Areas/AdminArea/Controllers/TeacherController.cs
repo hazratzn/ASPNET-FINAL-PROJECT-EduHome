@@ -30,8 +30,7 @@ namespace ASP.NET_Core_EduHome.Areas.AdminArea.Controllers
         {
             List<Teacher> teachers = await _context.Teachers
                 .Where(m => !m.IsDelete)
-                .Include(m=>m.TeacherSkills)
-                .ThenInclude(m=>m.Skills)
+                
                 .OrderByDescending(m => m.Id)
                 .ToListAsync();
             return View(teachers);
@@ -126,6 +125,115 @@ namespace ASP.NET_Core_EduHome.Areas.AdminArea.Controllers
             return RedirectToAction(nameof(Index));
 
         }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Delete(int id)
+        {
+            Teacher teacher = await _context.Teachers.Where(m => m.Id == id).FirstOrDefaultAsync();
+            TeacherContact teacherContact = await _context.TeacherContacts.Where(m => m.Id == id).FirstOrDefaultAsync();
+            TeacherDetail teacherDetail = await _context.TeacherDetails.Where(m => m.Id == id).FirstOrDefaultAsync();
+            TeacherSkill teacherSkill = await _context.TeacherSkills.Where(m => m.Id == id).FirstOrDefaultAsync();
+            if (teacher == null) return NotFound();
+            string path = Path.Combine(_enviroment.WebRootPath, "assets/img/teacher", teacher.Image);
+            if (System.IO.File.Exists(path))
+            {
+                System.IO.File.Delete(path);
+            };
+            teacherDetail.IsDelete = true;
+            teacherContact.IsDelete = true;
+            teacherSkill.IsDelete = true;
+            teacher.IsDelete = true;
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
 
+        }
+        public async Task<IActionResult> Update(int id)
+        {
+            Teacher teacher = await _context.Teachers
+                .Where(m => m.Id == id)
+                .Include(m=>m.TeacherContacts)
+                .Include(m => m.TeacherDetails)
+                .Include(m=>m.TeacherSkills)
+                .ThenInclude(m=>m.Skills)
+                .FirstOrDefaultAsync();
+            TeacherSkill teacherSkill = await _context.TeacherSkills.Where(m => m.TeacherId == teacher.Id).FirstOrDefaultAsync();
+            List<Skill> skills = await _context.Skills.ToListAsync();
+            if (teacher == null) return NotFound();
+
+            TeacherUpdateVM teacherUpdateVM = new TeacherUpdateVM()
+            {
+                Teacher =teacher,
+                TeacherContacts = teacher.TeacherContacts,
+                TeacherDetails = teacher.TeacherDetails,
+                Percentage = teacherSkill.Percentage,
+                Skills =skills,
+            };
+
+            return View(teacherUpdateVM);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Update(int id, TeacherUpdateVM teacherUpdateVM)
+        {
+            if (!teacherUpdateVM.Photo.ContentType.Contains("image/"))
+            {
+                ModelState.AddModelError("Photo", "File was not found");
+            }
+            if (teacherUpdateVM.Photo.Length / 1024 > 300)
+            {
+                ModelState.AddModelError("Photo", "File size is invalid");
+                return View();
+            }
+            if (!ModelState.IsValid) return View();
+            
+            if (id != teacherUpdateVM.Id) return BadRequest();
+
+            Teacher dbteacher = await _context.Teachers.Where(m => m.Id == teacherUpdateVM.Id)
+                
+                .Include(m => m.TeacherContacts)
+                .Include(m => m.TeacherDetails)
+                .Include(m => m.TeacherSkills)
+                .ThenInclude(m => m.Skills)
+                .FirstOrDefaultAsync();
+            string filname = Guid.NewGuid().ToString() + "_" + teacherUpdateVM.Photo.FileName;
+            string path = Helper.GetPath(_enviroment.WebRootPath, "assets/img/teacher", filname);
+            using (FileStream stream = new FileStream(path, FileMode.Create))
+            {
+                await teacherUpdateVM.Photo.CopyToAsync(stream);
+            }
+            string lastImage = Path.Combine(_enviroment.WebRootPath, "assets/img/teacher", dbteacher.Image);
+            if(System.IO.File.Exists(lastImage))
+            {
+                System.IO.File.Delete(lastImage);
+            }
+            dbteacher.Image = filname;
+            dbteacher.Profession = teacherUpdateVM.Teacher.Profession;
+            dbteacher.FullNAME = teacherUpdateVM.Teacher.FullNAME;
+            dbteacher.About = teacherUpdateVM.Teacher.About;
+            dbteacher.TeacherContacts.Mail = teacherUpdateVM.TeacherContacts.Mail;
+            dbteacher.TeacherContacts.Phone = teacherUpdateVM.TeacherContacts.Phone;
+            dbteacher.TeacherContacts.Skype = teacherUpdateVM.TeacherContacts.Skype;
+            dbteacher.TeacherDetails.Degree = teacherUpdateVM.TeacherDetails.Degree;
+            dbteacher.TeacherDetails.Experience = teacherUpdateVM.TeacherDetails.Experience;
+            dbteacher.TeacherDetails.Hobbies = teacherUpdateVM.TeacherDetails.Hobbies;
+            dbteacher.TeacherDetails.Faculty = teacherUpdateVM.TeacherDetails.Faculty;
+            foreach (var teacherSkill in dbteacher.TeacherSkills)
+            {
+                teacherSkill.Percentage = teacherUpdateVM.Percentage;
+            }
+
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
+        public async Task<IActionResult> Detail(int id)
+        {
+            Teacher teacher = await _context.Teachers.Where(m => m.Id == id)
+                .Include(m => m.TeacherContacts)
+                .Include(m => m.TeacherDetails)
+                .Include(m => m.TeacherSkills)
+                .ThenInclude(m => m.Skills)
+                .FirstOrDefaultAsync();
+            return View(teacher);
+        }
     }
 }

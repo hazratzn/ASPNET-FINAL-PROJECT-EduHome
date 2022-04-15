@@ -75,21 +75,27 @@
                 </div>
                 <div class="skill-wrapper">
                     <div class="row">
-                        
 
-                       
+
+                        @foreach (var skill in Model.Teacher.TeacherSkills)
+                        {
+
                             <div class="col-sm-4">
                                 <div class="skill-bar-item">
-                                    <span> @Model.Teacher.TeacherSkills.Skills.Name </span>
+                                    <span> @skill.Skills.Name </span>
                                     <div class="progress">
-                                        <div data-wow-delay="1.2s" data-wow-duration="1.5s" style="width: @Model.Teacher.TeacherSkills.Percentage%; visibility: visible; animation-duration: 1.5s; animation-delay: 1.2s; animation-name: fadeInLeft;" data-progress="50%" class="progress-bar wow fadeInLeft">
-                                            <span class="text-top">@Model.Teacher.TeacherSkills.Percentage %</span>
+                                        <div data-wow-delay="1.2s" data-wow-duration="1.5s" style="width: @skill.Percentage%; visibility: visible; animation-duration: 1.5s; animation-delay: 1.2s; animation-name: fadeInLeft;" data-progress="50%" class="progress-bar wow fadeInLeft">
+                                            <span class="text-top">@skill.Percentage %</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            
-                        
+
+
+                        }
+
+
+
 
 
                     </div>
