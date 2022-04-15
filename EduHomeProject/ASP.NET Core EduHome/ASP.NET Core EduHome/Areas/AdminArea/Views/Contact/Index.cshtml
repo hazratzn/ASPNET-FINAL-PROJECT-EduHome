@@ -1,0 +1,63 @@
+﻿
+
+@model Contact
+@{
+    ViewData["Title"] = "Index";
+
+}
+
+<div class="container mt-3">
+    <div class="d-flex justify-content-between">
+        <h2>Welcome Banner</h2>
+    </div>
+    <div class="table-responsive pt-3">
+        <table class="table table-dark">
+            <thead>
+                <tr>
+                    <th>
+                        #
+                    </th>
+                    <th>
+                        Website
+                    </th>
+                    <th>
+                        Location
+                    </th>
+                    <th>
+                        Phone
+                    </th>
+                    <th>
+                        Setting
+                    </th>
+
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        1
+                    </td>
+                    <td>
+                        @Model.WebSite
+                       
+                    </td>
+                    <td>
+                        @Model.Location
+                    </td>
+                    <td>
+                        @Model.PhoneNum
+                    </td>
+
+                    <td>
+                        <a class="btn btn-warning" asp-action="Update" asp-route-id="@Model.Id">Edit</a>
+                    </td>
+
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+

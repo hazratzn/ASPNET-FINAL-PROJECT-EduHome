@@ -207,3 +207,5 @@ C:\Users\ASUS\Desktop\Final Project ASP\EduHomeProject\ASP.NET Core EduHome\ASP.
 C:\Users\ASUS\Desktop\Final Project ASP\EduHomeProject\ASP.NET Core EduHome\ASP.NET Core EduHome\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Teacher\Detail.cshtml.g.cs
 C:\Users\ASUS\Desktop\Final Project ASP\EduHomeProject\ASP.NET Core EduHome\ASP.NET Core EduHome\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Event\Index.cshtml.g.cs
 C:\Users\ASUS\Desktop\Final Project ASP\EduHomeProject\ASP.NET Core EduHome\ASP.NET Core EduHome\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Event\Create.cshtml.g.cs
+C:\Users\ASUS\Desktop\Final Project ASP\EduHomeProject\ASP.NET Core EduHome\ASP.NET Core EduHome\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Contact\Index.cshtml.g.cs
+C:\Users\ASUS\Desktop\Final Project ASP\EduHomeProject\ASP.NET Core EduHome\ASP.NET Core EduHome\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Contact\Update.cshtml.g.cs

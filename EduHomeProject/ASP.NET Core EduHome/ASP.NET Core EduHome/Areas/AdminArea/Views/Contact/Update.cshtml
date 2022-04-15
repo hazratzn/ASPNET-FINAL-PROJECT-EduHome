@@ -1,0 +1,37 @@
+﻿@model Contact
+@{
+    ViewData["Title"] = "Update Contact";
+}
+
+<div class="container">
+    <div class="col-md-6 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+
+
+                <form class="forms-sample mt-5" method="post" asp-action="Update">
+                    <div class="form-group">
+                        <label asp-for="WebSite"></label>
+                        <input class="form-control" asp-for="WebSite">
+                        <span class="text-danger" asp-validation-for="WebSite"></span>
+
+                        <label asp-for="Location"></label>
+                        <input class="form-control" asp-for="Location">
+                        <span class="text-danger" asp-validation-for="Location"></span>
+
+                        <label asp-for="PhoneNum"></label>
+                        <input class="form-control" asp-for="PhoneNum">
+                        <span class="text-danger" asp-validation-for="PhoneNum"></span>
+
+
+                    </div>
+                    <button type="submit" class="btn btn-primary me-2">Submit</button>
+                    <button class="btn btn-light">
+                        <a asp-action="Index">Cancel</a>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

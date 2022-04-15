@@ -41,14 +41,15 @@
 
 
                         <h3 class="my-5">Event Speakers</h3>
-
-                        @foreach (var speakers in Model.EventSpeakers)
+                        @for (int i = 0; i < Model.EventSpeakers.Count(); i++)
                         {
-
-                            <label asp-for="@speakers.Teachers.FullNAME"></label>
-                            <input class="checkbox" asp-for="@speakers.Teachers.IsChecked">
-                            <span class="text-danger" asp-validation-for="@speakers.Teachers.FullNAME"></span>
-                        }
+                                    <label>@Model.EventSpeakers[i].Teachers.FullNAME"</label>
+                                    <input type="hidden" asp-for="@Model.EventSpeakers[i].Teachers.FullNAME" />
+                                    <input type="hidden" asp-for="@Model.EventSpeakers[i]" />
+                                     <input type="hidden" asp-for="@Model.EventSpeakers[i].Teachers" />
+                                      <input class="checkbox" asp-for="@Model.EventSpeakers[i].Teachers.IsChecked">
+                                     <span class="text-danger" asp-validation-for="@Model.EventSpeakers[i].Teachers.FullNAME"></span>
+                                     }
                     </div>
                     <button type="submit" class="btn btn-primary me-2">Submit</button>
                     <button class="btn btn-light">

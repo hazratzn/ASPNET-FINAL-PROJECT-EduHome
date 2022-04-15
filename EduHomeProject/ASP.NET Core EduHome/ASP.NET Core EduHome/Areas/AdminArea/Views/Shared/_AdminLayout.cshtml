@@ -422,7 +422,7 @@
                         <div class="collapse" id="charts">
                             <ul class="nav flex-column sub-menu">
                                 <li class="nav-item"><a asp-area="AdminArea" asp-controller="Course" asp-action="Index"> List </a></li>
-                                
+
                             </ul>
                         </div>
                     </li>
@@ -450,7 +450,7 @@
                             </ul>
                         </div>
                     </li>
-                   
+
                     <li class="nav-item">
                         <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
                             <i class="menu-icon mdi mdi-account-circle-outline"></i>
@@ -459,7 +459,19 @@
                         </a>
                         <div class="collapse" id="auth">
                             <ul class="nav flex-column sub-menu">
-                                <li class="nav-item"><a asp-area="AdminArea" asp-controller="Event" asp-action="Index"> Event </a></li>
+                                <li class="nav-item"><a asp-area="AdminArea" asp-controller="Event" asp-action="Index"> Event detail </a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+                            <i class="menu-icon mdi mdi-account-circle-outline"></i>
+                            <span class="menu-title">Contact</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                        <div class="collapse" id="auth">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item"><a asp-area="AdminArea" asp-controller="Contact" asp-action="Index"> Contact detail </a></li>
                             </ul>
                         </div>
                     </li>
