@@ -57,6 +57,17 @@ namespace ASP.NET_Core_EduHome.Controllers
 
             return View(coursedetailsVM);
         }
+        public async Task<IActionResult> Search(string course)
+        {
+            ViewData["GetCourses"] = course;
+
+            if (!String.IsNullOrEmpty(course))
+            {
+                List<Course> courseQuery = await _context.Course.Where(m => m.Title.Trim().ToLower().Contains(course.Trim().ToLower())).ToListAsync();
+                return View(courseQuery);
+            }
+            return View();
+        }
 
     }
 }

@@ -21,20 +21,27 @@ using ASP.NET_Core_EduHome;
 #nullable disable
 #nullable restore
 #line 2 "C:\Users\ASUS\Desktop\Final Project ASP\EduHomeProject\ASP.NET Core EduHome\ASP.NET Core EduHome\Areas\AdminArea\Views\_ViewImports.cshtml"
-using ASP.NET_Core_EduHome.ViewModel.Admin;
+using ASP.NET_Core_EduHome.Areas.AdminArea.Utilities.Pagination;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 3 "C:\Users\ASUS\Desktop\Final Project ASP\EduHomeProject\ASP.NET Core EduHome\ASP.NET Core EduHome\Areas\AdminArea\Views\_ViewImports.cshtml"
+using ASP.NET_Core_EduHome.ViewModel.Admin;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "C:\Users\ASUS\Desktop\Final Project ASP\EduHomeProject\ASP.NET Core EduHome\ASP.NET Core EduHome\Areas\AdminArea\Views\_ViewImports.cshtml"
 using ASP.NET_Core_EduHome.Models;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"81d376ef2c5d4b9789a4278c6ef6cd6b23df39ff", @"/Areas/AdminArea/Views/Testemonial/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a6b0de08c5eed0853d10cf0fb74e06115317ac95", @"/Areas/AdminArea/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"56e23faf79d701d0f52029d0102d8e9fc47b13c7", @"/Areas/AdminArea/Views/_ViewImports.cshtml")]
     public class Areas_AdminArea_Views_Testemonial_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<List<Testemonial>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("btn btn-success"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -85,7 +92,7 @@ using ASP.NET_Core_EduHome.Models;
 #line hidden
 #nullable disable
             WriteLiteral("<div class=\"container mt-3\">\r\n    <div class=\"d-flex justify-content-between\">\r\n        <h2>Testimonials</h2>\r\n        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "81d376ef2c5d4b9789a4278c6ef6cd6b23df39ff7773", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "81d376ef2c5d4b9789a4278c6ef6cd6b23df39ff8058", async() => {
                 WriteLiteral("Create Testemonial");
             }
             );
@@ -141,7 +148,7 @@ using ASP.NET_Core_EduHome.Models;
 #line hidden
 #nullable disable
             WriteLiteral("\r\n                        </td>\r\n                        <td>\r\n                            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "81d376ef2c5d4b9789a4278c6ef6cd6b23df39ff10377", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "81d376ef2c5d4b9789a4278c6ef6cd6b23df39ff10662", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -173,7 +180,7 @@ AddHtmlAttributeValue("", 1116, testimonial.Image, 1116, 18, false);
 #line hidden
 #nullable disable
             WriteLiteral("\r\n\r\n                        </td>\r\n\r\n                        <td>\r\n                            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "81d376ef2c5d4b9789a4278c6ef6cd6b23df39ff12536", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "81d376ef2c5d4b9789a4278c6ef6cd6b23df39ff12821", async() => {
                 WriteLiteral("Edit");
             }
             );
@@ -205,7 +212,7 @@ AddHtmlAttributeValue("", 1116, testimonial.Image, 1116, 18, false);
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n\r\n                            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "81d376ef2c5d4b9789a4278c6ef6cd6b23df39ff14908", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "81d376ef2c5d4b9789a4278c6ef6cd6b23df39ff15193", async() => {
                 WriteLiteral("\r\n                                <button class=\"btn btn-danger\">Delete</button>\r\n                            ");
             }
             );
@@ -241,7 +248,7 @@ AddHtmlAttributeValue("", 1116, testimonial.Image, 1116, 18, false);
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "81d376ef2c5d4b9789a4278c6ef6cd6b23df39ff17880", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "81d376ef2c5d4b9789a4278c6ef6cd6b23df39ff18165", async() => {
                 WriteLiteral("Detail");
             }
             );

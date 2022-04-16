@@ -21,20 +21,27 @@ using ASP.NET_Core_EduHome;
 #nullable disable
 #nullable restore
 #line 2 "C:\Users\ASUS\Desktop\Final Project ASP\EduHomeProject\ASP.NET Core EduHome\ASP.NET Core EduHome\Areas\AdminArea\Views\_ViewImports.cshtml"
-using ASP.NET_Core_EduHome.ViewModel.Admin;
+using ASP.NET_Core_EduHome.Areas.AdminArea.Utilities.Pagination;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 3 "C:\Users\ASUS\Desktop\Final Project ASP\EduHomeProject\ASP.NET Core EduHome\ASP.NET Core EduHome\Areas\AdminArea\Views\_ViewImports.cshtml"
+using ASP.NET_Core_EduHome.ViewModel.Admin;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "C:\Users\ASUS\Desktop\Final Project ASP\EduHomeProject\ASP.NET Core EduHome\ASP.NET Core EduHome\Areas\AdminArea\Views\_ViewImports.cshtml"
 using ASP.NET_Core_EduHome.Models;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"6756c1f482d45b3d257f97f268b8bf69ef41a7e3", @"/Areas/AdminArea/Views/ProTeacher/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a6b0de08c5eed0853d10cf0fb74e06115317ac95", @"/Areas/AdminArea/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"56e23faf79d701d0f52029d0102d8e9fc47b13c7", @"/Areas/AdminArea/Views/_ViewImports.cshtml")]
     public class Areas_AdminArea_Views_ProTeacher_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<List<ProfessionalTeacher>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("btn btn-success"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -81,7 +88,7 @@ using ASP.NET_Core_EduHome.Models;
 #line hidden
 #nullable disable
             WriteLiteral("<div class=\"container mt-3\">\n    <div class=\"d-flex justify-content-between\">\n        <h2>Professional Teacher</h2>\n        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6756c1f482d45b3d257f97f268b8bf69ef41a7e37258", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6756c1f482d45b3d257f97f268b8bf69ef41a7e37543", async() => {
                 WriteLiteral("Create Teacher");
             }
             );
@@ -155,7 +162,7 @@ WriteAttributeValue(" ", 920, teacher.IsDelete == true?"d-block":"d-none", 921, 
             WriteAttributeValue(" ", 967, "", 968, 1, true);
             EndWriteAttribute();
             WriteLiteral(" >Deleted</span>\n\n        </td>\n        <td>\n            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6756c1f482d45b3d257f97f268b8bf69ef41a7e310647", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6756c1f482d45b3d257f97f268b8bf69ef41a7e310932", async() => {
                 WriteLiteral("Edit");
             }
             );
@@ -187,7 +194,7 @@ WriteAttributeValue(" ", 920, teacher.IsDelete == true?"d-block":"d-none", 921, 
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\n\n            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6756c1f482d45b3d257f97f268b8bf69ef41a7e312978", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6756c1f482d45b3d257f97f268b8bf69ef41a7e313263", async() => {
                 WriteLiteral("\n                <button class=\"btn btn-danger\">Delete</button>\n            ");
             }
             );
@@ -223,7 +230,7 @@ WriteAttributeValue(" ", 920, teacher.IsDelete == true?"d-block":"d-none", 921, 
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\n            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6756c1f482d45b3d257f97f268b8bf69ef41a7e315875", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6756c1f482d45b3d257f97f268b8bf69ef41a7e316160", async() => {
                 WriteLiteral("Detail");
             }
             );

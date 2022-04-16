@@ -1,4 +1,4 @@
-﻿@model CourseVM
+﻿@model List<Course>
 @{
     ViewData["Title"] = "Index";
 }
@@ -38,7 +38,7 @@
         </div>
         <div class="row">
 
-            @foreach (var course in Model.Courses.OrderByDescending(m=>m.Id).Take(9))
+            @foreach (var course in Model.OrderByDescending(m=>m.Id))
             {
                 <div class="col-md-4 hidden-sm col-xs-12">
                     <div class="single-course">
@@ -53,7 +53,7 @@
                         <div class="course-content">
                             <h3><a href="course-details.html">@course.Title</a></h3>
                             <p>@course.Description</p>
-                            <a class="default-btn" asp-controller="Course" asp-action="CourseDetails"asp-route-id="@course.Id">read more</a>
+                            <a class="default-btn" asp-controller="Course" asp-action="CourseDetails" asp-route-id="@course.Id">read more</a>
                         </div>
                     </div>
                 </div>

@@ -1,5 +1,6 @@
 ﻿using ASP.NET_Core_EduHome.Areas.AdminArea.Utilities.Extentions;
 using ASP.NET_Core_EduHome.Areas.AdminArea.Utilities.Helpers;
+using ASP.NET_Core_EduHome.Areas.AdminArea.Utilities.Pagination;
 using ASP.NET_Core_EduHome.Data;
 using ASP.NET_Core_EduHome.Models;
 using ASP.NET_Core_EduHome.ViewModel.Admin;
@@ -26,15 +27,27 @@ namespace ASP.NET_Core_EduHome.Areas.AdminArea.Controllers
             _enviroment = enviroment;
 
         }
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int page = 1, int take = 10)
         {
             List<Teacher> teachers = await _context.Teachers
                 .Where(m => !m.IsDelete)
-                
+                .Skip((page-1)*take)
+                .Take(take)
                 .OrderByDescending(m => m.Id)
                 .ToListAsync();
-            return View(teachers);
+            
+            int count = await GetPageCount(take);
+            Paginate<Teacher> pagination = new Paginate<Teacher>(teachers, page, count);
+            return View(pagination);
+
         }
+        private async Task<int> GetPageCount(int take)
+        {
+            var count = await _context.Teachers.CountAsync();
+            return (int)Math.Ceiling((decimal)count / take);
+        }
+
+
         public async Task< IActionResult> Create()
         {
             List<Skill> skills = await _context.Skills.ToListAsync();

@@ -3,14 +3,14 @@ using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace ASP.NET_Core_EduHome.ViewModel.Admin
 {
-    public class EventCreateVM
+    public class EventUpdateVM
     {
+        public int Id { get; set; }
         [Required]
         public Event Event { get; set; }
         [Required]
@@ -19,5 +19,6 @@ namespace ASP.NET_Core_EduHome.ViewModel.Admin
         public List<EventSpeaker> EventSpeakers { get; set; }
         [Required]
         public IFormFile Photo { get; set; }
+
     }
 }
